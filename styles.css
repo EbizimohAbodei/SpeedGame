@@ -15,6 +15,7 @@ body {
   background-repeat: no-repeat;
   background-size: 100%;
   height: 100vh;
+  font-family: "Montaga", serif;
 }
 
 h1 {
@@ -23,32 +24,97 @@ h1 {
   font-size: 4rem;
 }
 
-div {
+section {
   display: flex;
   justify-content: center;
   margin: 5rem 0rem;
+}
+
+#score {
+  margin: 1rem 0rem;
+  text-align: center;
 }
 
 button {
   margin: 1rem;
 }
 
+.start:hover,
+.stop:hover,
+.close:hover {
+  cursor: pointer;
+}
+
 .button__click {
-  height: 5rem;
-  width: 5rem;
-  border-radius: 2.5rem;
+  height: 6rem;
+  width: 6rem;
+  border-radius: 3rem;
+  cursor: pointer;
+  pointer-events: none;
 }
 
-.gameOver__overlay {
+.active {
+  background-color: indianred;
+  border: none;
+}
+
+.modal__overlay {
+  visibility: hidden;
   display: flex;
-  position: absolute;
   justify-content: center;
+  align-items: center;
+  position: fixed; /* Stay in place */
+  z-index: 100; /* Sit on top */
+  top: 0;
+  left: 0;
+  /* margin: 15rem 22rem; */
+  width: 100%;
+  height: 100%;
+  background-color: rgb(50, 192, 145);
+  background-color: rgba(18, 19, 18, 0.849); /* Black w/ opacity */
+  border-radius: 0.25rem;
 }
 
+.modal {
+  background-color: white;
+  padding: 3rem;
+  width: 30%;
+  height: 30%;
+  border-radius: 0.2rem;
+  position: relative;
+}
+
+#result {
+  text-align: center;
+}
+
+.overlay__button {
+  position: absolute;
+  top: 0;
+  right: 0;
+  height: 1.5rem;
+  width: 2.5rem;
+  background-color: #1c767e;
+  border-radius: 0.2rem;
+  border: none;
+}
+
+h3 {
+  margin: 5rem 0rem;
+  text-align: center;
+}
 .control__button {
   height: 2.5rem;
   width: 6rem;
   border-radius: 2rem;
   background-color: #008793;
   color: #85bb0f;
+}
+
+.stop {
+  display: none;
+}
+
+#remark {
+  text-align: center;
 }

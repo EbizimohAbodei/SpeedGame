@@ -4,6 +4,12 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Laila&family=Literata&family=Montaga&family=Philosopher&family=Zen+Old+Mincho&display=swap"
+      rel="stylesheet"
+    />
     <link rel="stylesheet" href="styles.css" />
     <title>Speed Game</title>
   </head>
@@ -12,24 +18,31 @@
       <h1>Speed-Game</h1>
     </header>
     <main>
-      <div>
-        <h2>Your Score: 0</h2>
+      <section>
+        <div>
+          <h2>Your Score:</h2>
+          <h2 id="score">0</h2>
+        </div>
+      </section>
+      <div class="modal__overlay">
+        <div class="modal">
+          <button class="overlay__button close">close</button>
+          <h3 class="overlay__score">Your final score was:</h3>
+          <h2 id="result">0</h2>
+          <h2 id="remark"></h2>
+        </div>
       </div>
-      <div class="gameOver__overlay">
-        <button class="close">close</button>
-        <h3>Your final score was -</h3>
-      </div>
-      <div>
-        <button class="button__click one"></button>
-        <button class="button__click two"></button>
-        <button class="button__click three"></button>
-        <button class="button__click four"></button>
-      </div>
+      <section>
+        <button class="button__click" id="one"></button>
+        <button class="button__click" id="two"></button>
+        <button class="button__click" id="three"></button>
+        <button class="button__click" id="four"></button>
+      </section>
 
-      <div>
-        <button class="control__button start">Start Game</button>
-        <button class="control__button stop">End Game</button>
-      </div>
+      <section>
+        <button class="control__button start" type="button">Start Game</button>
+        <button class="control__button stop" type="button">End Game</button>
+      </section>
     </main>
     <script src="main.js"></script>
   </body>
